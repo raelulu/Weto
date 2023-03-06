@@ -1,0 +1,19 @@
+.nav_container {
+  justify-content: center;
+  z-index: 100;
+}
+.weto {
+  font-size: 50px;
+  z-index: 100;
+  color: white;
+}
+
+.nav_size {
+  width: 1920px;
+  margin: 0 5%;
+  z-index: 100;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
