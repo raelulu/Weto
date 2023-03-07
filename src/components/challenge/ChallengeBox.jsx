@@ -31,6 +31,7 @@ const Title = styled.div`
 
 const ChallengeDiv = styled.div`
   // 위치 지정
+  color: #FFC600;
   width: 100%;
   height: 100vh;
   margin-top: -150px;
@@ -84,7 +85,7 @@ const ChallengeItems = styled.div`
 `;
 const ChallengeItem = styled.div`
   &:hover {
-    color: #505050;
+    color: white;
   }
 `;
 

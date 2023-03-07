@@ -163,6 +163,9 @@ form button {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  /* background-color: rgb(255, 198, 0, 0.2);
+  border-radius: 20px; */
+  padding: 2%;
 }
 
 .crewPost {
@@ -226,8 +229,7 @@ form button {
 .btnDiv {
   width: 59%;
   text-align: right;
-  margin: 0 5%;
-  margin-bottom: 20px;
+  margin: 20px 9%;
 }
 
 .recentCrew {

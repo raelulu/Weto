@@ -19,7 +19,8 @@ const Div = styled.div`
   width: 100%;
   left: 50%;
   transform: translate(-50% , 0);
-  z-index: 100;background: linear-gradient(120deg, #5800FF, #FFC600);
+  z-index: 100;
+  background: linear-gradient(120deg, #5800FF, #FFC600);
   `;
 
 const Maindiv = styled.div`
