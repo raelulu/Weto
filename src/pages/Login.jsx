@@ -22,8 +22,6 @@ const Logo = styled.p`
   width: 137px;
   height: 65px;
   margin: 70px auto -10px;
-
-  font-family: 'Port Lligat Slab';
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -65,9 +63,9 @@ const LoginBtn = styled.button`
   height: 8%;
   border: 1px solid #d8d8d8;
   cursor: pointer;
-  font-family: 'Port Lligat Slab';
   background-color: black;
   color: white;
+  font-size: 15px;
 
   &:disabled {
     /* background-color: unset;
@@ -80,8 +78,8 @@ const JoinBtn = styled.button`
   height: 8%;
   border: 1px solid #d8d8d8;
   cursor: pointer;
-  font-family: 'Port Lligat Slab';
   background-color: black;
+  font-size: 12px;
   color: white;
 `;
 
@@ -187,7 +185,7 @@ export default function Login() {
           Log In
         </LoginBtn>
         <br />
-        <Line>--------------------------------------</Line>
+        <Line>-----------------------</Line>
         <br />
         <JoinBtn onClick={() => window.open('/Join', '_self')}>
           Create an Account

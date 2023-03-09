@@ -20,7 +20,6 @@ const Logo = styled.p`
   width: 137px;
   height: 65px;
   margin: 20px auto 0px;
-  font-family: 'Port Lligat Slab';
   font-style: normal;
   font-weight: 400;
   font-size: 40px;
@@ -87,9 +86,9 @@ const Joinbtn = styled.button`
   width: 69%;
   height: 8%;
   margin: 20px;
+  font-size: 12px;
   border: 1px solid #d8d8d8;
   cursor: pointer;
-  font-family: 'Port Lligat Slab';
   background-color: black;
   color: white;
 `;
@@ -177,7 +176,7 @@ export default function JoinBox() {
         ></Nickname>
         <Phone placeholder="Phone ex.01012341234" value={phone} onChange={registerPhone} type='number' required></Phone>
         <br />
-        <div>----------side info----------</div>
+        <div>-------side info-------</div>
         <City name="items1" onChange={registerCity} required>
           <option value="">City</option>
           <option value="seoul/서울특별시">서울특별시</option>
