@@ -16,7 +16,7 @@ import styled from 'styled-components';
 
 const OutBox = styled.div`
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 100px auto;
   display: flex;
   justify-content: space-between;
 `;
