@@ -15,6 +15,7 @@ const InfoTitle = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   display: inline-block;
+  color: white;
 `;
 
 export default function ChatPage() {
