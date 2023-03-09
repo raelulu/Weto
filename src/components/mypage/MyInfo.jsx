@@ -49,6 +49,7 @@ const CrBox = styled.div`
   padding: 5%;
   background-color: rgb(255, 198, 0, 0.2);
   width: 100%;
+  height: 60vh;
   border-radius: 20px;
   @media (max-width: 912px) {
   }
@@ -277,7 +278,7 @@ export default function Main({ arrowShow }) {
           CREW
           <br />
           <br />
-          {crew.map((el, i) => (
+          {crew.slice(0, 6).map((el, i) => (
             <div className="crew_info" key={i}>
               <img alt="img" src={el.image} className="crew_img" />
               <div className="crew_word">
