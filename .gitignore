@@ -5,7 +5,7 @@ node_modules
 .env
 /.pnp
 .pnp.js
-# public/img
+public/img
 
 # testing
 /coverage
