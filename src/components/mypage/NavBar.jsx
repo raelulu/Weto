@@ -33,7 +33,6 @@ function BasicExample() {
     sessionStorage.removeItem('nickName');
     sessionStorage.removeItem('phone');
     sessionStorage.removeItem('city');
-    navigate('/');
   };
   return (
     <Navbar className="nav_container text-white" collapseOnSelect expand="lg">
@@ -64,7 +63,7 @@ function BasicExample() {
                 LOGIN
               </Nav.Link>
             ) : (
-              <Nav.Link onClick={() => logout()}>LOGOUT</Nav.Link>
+              <Nav.Link onClick={() => logout()} href="/">LOGOUT</Nav.Link>
             )}
           </Nav>
         </Navbar.Collapse>
