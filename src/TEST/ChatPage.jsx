@@ -19,11 +19,11 @@ const InfoTitle = styled.div`
 `;
 
 export default function ChatPage() {
-  let socket = io.connect(process.env.REACT_APP_URL);
-
+  // let socket = io.connect(process.env.REACT_APP_URL);
+  const [socket, setSocket] = useState(null);
+  
   const user = sessionStorage;
   const [crew, setCrew] = useState([]);
-
   const [display, setDisplay] = useState(0);
   const [currentCrew, currentCrewSet] = useState('');
   const page = useSelector((state) => state.crew.page);
@@ -32,6 +32,10 @@ export default function ChatPage() {
   const changeNum = (e) => dispatch(crewPagination(e - 1));
   const change = useSelector((state) => state.crew.crewChange);
   const [numberInChat, numberInChatSet] = useState(0);
+  
+  useEffect(() => {
+    setSocket(io.connect(process.env.REACT_APP_URL));
+  }, []);
 
   useEffect(() => {
     dispatch(crewPagination(0));
