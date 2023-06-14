@@ -11,7 +11,7 @@ export default function Chat({
 }) {
   console.log('user', user);
   console.log('ChatComponent');
-  console.log(socket, socket?.id); //왜 소켓아이디는 안뜨냐
+  console.log(socket, socket?.id);
   const socketId = socket?.id;
   const [chatting, setChatting] = useState([]);
   console.log(chatting);

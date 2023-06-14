@@ -19,9 +19,7 @@
   padding: 60px 20px 40px 20px;
   /* position: relative; */
 }
-.room ul {
-  /* padding-bottom: 30px; */
-}
+
 li.yourMessage {
   list-style: none;
   /* margin-bottom: 50px; */
@@ -212,7 +210,6 @@ form button {
   font-weight: 800;
 }
 
-
 .crewDiv {
   width: 27.3%;
   display: flex;
@@ -240,7 +237,6 @@ form button {
   margin-top: 3vw;
 }
 .recentCrew button {
-
   padding: 10px;
   background: #000;
   color: #fff;
@@ -266,7 +262,6 @@ form button {
   width: 100%;
 }
 
-
 .CrewInfoBox {
   width: 25%;
   height: 100%;
@@ -280,17 +275,15 @@ form button {
   justify-content: space-between;
 }
 
-.CrewInfoBox p, .CrewInfoBox h4 {
+.CrewInfoBox p,
+.CrewInfoBox h4 {
   overflow-wrap: break-word;
   width: 80%;
 }
 
-
-
 .currentCrewImg {
   width: 60%;
   height: 40%;
-  
 }
 
 .CrewInfoBox button {
@@ -303,7 +296,7 @@ form button {
   font-size: 1vw;
 }
 
-@media (max-width: 1000px) {  
+@media (max-width: 1000px) {
   .crewDiv {
     width: 40%;
   }
@@ -326,24 +319,4 @@ form button {
   .relative {
     width: 40%;
   }
-} 
-/* @media (max-width: 620px) {  
-  .AllCrewPost {
-    width: 40%;
-  }
-  .crewDiv {
-    width: 60%;
-  }
-  .room {
-    height: 60vw;
-  }
-  .CrewInfoBox {
-    width: 40%;
-  }
-  .btnDiv {
-    width: 47%;
-  }
-  .relative {
-    width: 60%;
-  }
-}  */
+}
