@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 import { userInfoCreate } from '../store/modules/user';
 import { useNavigate } from 'react-router-dom';
-// import { change } from '../store/modules/user';
 
 const Div = styled.div`
   position: absolute;
@@ -89,23 +88,12 @@ export default function Login() {
   const [valid, setValid] = useState(true);
   const [btnAct, setBtnAct] = useState(true);
   const navigate = useNavigate();
-  // const [savedLoginId, setSavedLoginId] = useState('');
-  // const [savedLoginPassword, setSavedLoginPassword] = useState('');
-  // const [savedLoginNickname, setSavedLoginNickname] = useState('');
-  // const [savedLoginAddress, setSavedLoginAddress] = useState('');
 
   const sessionStorage = window.sessionStorage;
 
-  // user_name을 변경하는 작업
-  // 1.임시 user_name 설정
   const user_name = '서새싹';
   const dispatch = useDispatch();
-  // 2.useSelecter: user.jsx에 있는 initState 값을 가져오는 메서드
   const name = useSelector((state) => state.user.user_name);
-  // 3.dispatch: user.jsx에 설정한 액션함수를 가져오는 메서드
-  // const changeName = () => dispatch(change(user_name));
-  // 4.콘솔 확인(user_name)
-  console.log('name: ', name);
 
   const idValue = (e) => {
     setId(e.target.value);
@@ -124,8 +112,6 @@ export default function Login() {
   };
 
   const login = async () => {
-    // setSavedLoginId(sessionStorage.getItem('id'));
-    // setSavedLoginPassword(sessionStorage.getItem('pw'));
     if (pw == '') {
       setValid('비밀번호를 입력해주세요.');
     } else
@@ -139,8 +125,6 @@ export default function Login() {
           },
         });
         if (data.data.message == '로그인 성공!') {
-          // dispatch(userInfoCreate(data.data.data));
-          console.log('양식', data.data.data);
           sessionStorage.setItem('id', data.data.data.id);
           sessionStorage.setItem('name', data.data.data.name);
           sessionStorage.setItem('nickName', data.data.data.nickName);
@@ -190,9 +174,7 @@ export default function Login() {
         <JoinBtn onClick={() => window.open('/Join', '_self')}>
           Create an Account
         </JoinBtn>
-        {/* 삭제하세욤 */}
         <br />
-        {/* <button onClick={changeName}>fkfkf</button> */}
       </Div>
     </>
   );
