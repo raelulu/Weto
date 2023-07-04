@@ -25,7 +25,6 @@ function BasicExample() {
   }, []);
 
   const info = useSelector((state) => state.user.userInfo);
-  console.log('로그인상태', info);
 
   const logout = () => {
     sessionStorage.removeItem('id');
@@ -63,7 +62,9 @@ function BasicExample() {
                 LOGIN
               </Nav.Link>
             ) : (
-              <Nav.Link onClick={() => logout()} href="/">LOGOUT</Nav.Link>
+              <Nav.Link onClick={() => logout()} href="/">
+                LOGOUT
+              </Nav.Link>
             )}
           </Nav>
         </Navbar.Collapse>

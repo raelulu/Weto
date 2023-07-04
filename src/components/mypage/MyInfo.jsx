@@ -193,7 +193,6 @@ export default function Main({ arrowShow }) {
   useEffect(() => {
     // 프론트 <-> 서버 연결 에러 수정
     const infomodal = async () => {
-      console.log(sessionStorage.id);
       const userinfo = await axios({
         method: 'post',
         url: '/mypage/info',
@@ -205,7 +204,6 @@ export default function Main({ arrowShow }) {
       setResult(userinfo.data.info);
       setAmount(userinfo.data.amount);
       setCrew(userinfo.data.crew);
-      console.log(userinfo.data);
     };
 
     // 비로그인 시, alert 창 띄운 후 -> login페이지로

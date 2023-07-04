@@ -232,7 +232,6 @@ export default function Info({ imgWidth }) {
       function (rsp) {
         if (rsp.success) {
           // 기부 결제 완료 시, user 정보 서버로 전송
-          console.log(rsp);
           const data = {
             user_id: rsp.buyer_name,
             user_phone: rsp.buyer_tel.replace(/-/g, ''),

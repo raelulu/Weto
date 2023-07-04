@@ -83,8 +83,6 @@ export default function CrewModal() {
     formData.append('city', user.city?.split('/')[1] + ' ' + cityInfo);
     formData.append('img', img);
     axios.post('/crew/putCrew', formData).then((res) => {
-      console.log('확인용ㅇㅇㅇㅇ', res);
-      // dispatch(crewMain(res.data));
       dispatch(modalShow(false));
       dispatch(crewChange(true));
     });

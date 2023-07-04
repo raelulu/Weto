@@ -11,7 +11,7 @@ import swim from '../../static/images/swim.png';
 import { useSelector } from 'react-redux';
 
 const Outer = styled.div`
-/* width: 25%;
+  /* width: 25%;
   height: 70vh;
   margin-top: 150px;
   border-radius: 20px;
@@ -34,17 +34,15 @@ const Title = styled.div`
   font-style: normal;
   font-weight: 400;
   @media (max-width: 912px) {
-
   }
 `;
 
 const WeatherBox = styled.div`
-  
   text-align: center;
   margin: 0 auto;
   width: 100%;
   height: 10vh;
-  background-color: #5800FF;
+  background-color: #5800ff;
   border-radius: 20px;
   @media (max-width: 912px) {
   }
@@ -57,8 +55,8 @@ const Temp = styled.div`
   top: 5%;
   right: 10%;
   font-size: 5vh;
-  color: #FFC600;
-`
+  color: #ffc600;
+`;
 
 const State = styled.img`
   width: 10vh;
@@ -70,7 +68,7 @@ const FitnessBox = styled.div`
   width: 100%;
   border-radius: 20px;
   height: 23vh;
-  background-color: #5800FF;
+  background-color: #5800ff;
 
   /* position: relative;
   margin: 0 10% 0 10%;
@@ -175,7 +173,6 @@ export default function Weather() {
         // url: `https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${Region}&appid=${API_KEY}`,
       });
       setResult(data);
-      console.log(data.data);
       setWeather(data.data.weather[0].main);
       setIcon(data.data.weather[0].icon);
     };
@@ -183,34 +180,35 @@ export default function Weather() {
   }, []);
   return (
     <>
-        {Object.keys(result).length !== 0 && (
-          <Outer>
-            <Title>Today,
+      {Object.keys(result).length !== 0 && (
+        <Outer>
+          <Title>
+            Today,
+            <br />
+            Your City
+          </Title>
+          <Temp>{Math.round((result.data.main.temp - 273.15) * 10) / 10}℃</Temp>
+          <WeatherBox>
+            <State src={iconurl} alt="날씨" />
+            {WeatherCases[weather].title}
+          </WeatherBox>
+          <br />
+          <Title>
+            Recommend
+            <br />
+            Fitness
+          </Title>
+          <FitnessBox>
+            <br />
+            <div className="sky">
+              {WeatherCases[weather].subtitle}
               <br />
-              Your City
-            </Title>
-            <Temp>
-              {Math.round((result.data.main.temp - 273.15) * 10) / 10}℃
-            </Temp>
-            <WeatherBox>
-              <State src={iconurl} alt="날씨" />
-              {WeatherCases[weather].title}
-            </WeatherBox>
-              <br />
-            <Title>Recommend
-              <br />
-            Fitness</Title>
-            <FitnessBox>
-              <br />
-              <div className="sky">
-                {WeatherCases[weather].subtitle}
-                <br />
-                좋은 날씨에요.
-              </div>
-              <Fitimg src={WeatherCases[weather].img} />
-            </FitnessBox>
-          </Outer>
-        )}
+              좋은 날씨에요.
+            </div>
+            <Fitimg src={WeatherCases[weather].img} />
+          </FitnessBox>
+        </Outer>
+      )}
     </>
   );
 }

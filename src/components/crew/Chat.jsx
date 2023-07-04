@@ -9,12 +9,8 @@ export default function Chat({
   socket,
   numberInChatSet,
 }) {
-  console.log('user', user);
-  console.log('ChatComponent');
-  console.log(socket, socket?.id);
   const socketId = socket?.id;
   const [chatting, setChatting] = useState([]);
-  console.log(chatting);
   const inputValue = useRef(null);
 
   const room = useRef();
@@ -24,12 +20,10 @@ export default function Chat({
   const [sendMessageTime, setSendMessageTime] = useState(true);
 
   const [scrollHeight, setScrollHeight] = useState(null);
-  console.log(scrollHeight);
 
   // useEffect(() => {}, [firstLoad, sendMessageTime]);
 
   async function ChattingListLoad() {
-    console.log('ChattingListLoad', user.id);
     const data = await axios({
       method: 'post',
       url: `/chat/load`,
