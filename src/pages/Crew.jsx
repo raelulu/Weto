@@ -19,7 +19,6 @@ const InfoTitle = styled.div`
 `;
 
 export default function Crew() {
-  // let socket = io.connect(process.env.REACT_APP_URL);
   const [socket, setSocket] = useState(null);
 
   const user = sessionStorage;
