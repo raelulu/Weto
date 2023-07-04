@@ -60,9 +60,6 @@ export default function Crew() {
       return alert('로그인 후 이용해주세요.');
     }
     if (currentCrew.users?.find((e) => e.nickName == user.nickName)) {
-      //데미더이터
-      //내 유저 아이디와 같은게 있다면
-      //입장
       setDisplay(2);
       alert('입장');
     } else if (currentCrew.max <= currentCrew.users?.length) {
@@ -72,7 +69,6 @@ export default function Crew() {
         method: 'post',
         url: '/mate/addcrew',
         data: {
-          // User_id: user.id, //더미데이터
           crewId: currentCrew.id,
         },
       });
@@ -90,13 +86,11 @@ export default function Crew() {
       method: 'delete',
       url: '/mate/outcrew',
       data: {
-        // User_id: user.id, //더미데이터
         crewId: currentCrew.id,
       },
     });
     socket?.emit('outCrew', { nickName: user.nickName, currentCrew });
     setDisplay(1);
-    // setDisplay((state) => !state);
   }
 
   function selectCrew(e) {
