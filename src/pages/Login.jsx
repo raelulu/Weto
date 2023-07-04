@@ -134,7 +134,6 @@ export default function Login() {
           navigate('/');
         }
       } catch (err) {
-        console.log(err.response.data);
         if (err.response.data == '유저 정보가 없습니다.') {
           setValid('일치하는 아이디가 없습니다.');
           setId('');
