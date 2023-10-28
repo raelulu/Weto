@@ -31,45 +31,30 @@ const ID = styled.input`
   height: 3%;
   padding: 10px;
   border: 1px solid #d8d8d8;
-  ::placeholder {
-    font-size: 3px;
-  }
 `;
 const Name = styled.input`
   width: 69%;
   height: 3%;
   padding: 10px;
   border: 1px solid #d8d8d8;
-  ::placeholder {
-    font-size: 3px;
-  }
 `;
 const Phone = styled.input`
   width: 69%;
   height: 3%;
   padding: 10px;
   border: 1px solid #d8d8d8;
-  ::placeholder {
-    font-size: 3px;
-  }
 `;
 const Nickname = styled.input`
   width: 69%;
   height: 3%;
   padding: 10px;
   border: 1px solid #d8d8d8;
-  ::placeholder {
-    font-size: 3px;
-  }
 `;
 const PW = styled.input`
   width: 69%;
   height: 3%;
   padding: 10px;
   border: 1px solid #d8d8d8;
-  ::placeholder {
-    font-size: 3px;
-  }
 `;
 const City = styled.select`
   width: 69%;
@@ -78,9 +63,6 @@ const City = styled.select`
   border: 1px solid #d8d8d8;
   color: #999999;
   font-size: 10px;
-  ::placeholder {
-    font-size: 3px;
-  }
 `;
 const Joinbtn = styled.button`
   width: 69%;
@@ -119,38 +101,38 @@ export default function JoinBox() {
   const registerPhone = (e) => {
     setPhone(e.target.value);
   };
-  
+
   const register = async () => {
-    if(phone.length !== 11){
+    if (phone.length !== 11) {
       alert('11자리가 맞는지 확인해주세요.');
-    }else if(phone.slice(0,3) !== '010'){
+    } else if (phone.slice(0, 3) !== '010') {
       alert('옳바른 형식이 아닙니다. ex.01012341234');
     } else
-    try {
-      const request = await axios({
-        method: 'post',
-        url: '/auth/signup',
-        data: {
-          id: id,
-          pw: pwd,
-          city: city,
-          name: name,
-          nickName: nickname,
-          phone: phone
-        },
-      });
-      dispatch(userJoin(request.data));
-      alert('회원가입 성공');
-      navigate('/login');
-    } catch (err) {
-      if (err.response.data === '존재하는 ID입니다.') {
-        alert('존재하는 ID입니다');
-        setId('');
-      } else if (err.response.data === '존재하는 닉네임입니다.') {
-        alert('존재하는 닉네임입니다.');
-        setNickname('');
+      try {
+        const request = await axios({
+          method: 'post',
+          url: '/auth/signup',
+          data: {
+            id: id,
+            pw: pwd,
+            city: city,
+            name: name,
+            nickName: nickname,
+            phone: phone,
+          },
+        });
+        dispatch(userJoin(request.data));
+        alert('회원가입 성공');
+        navigate('/login');
+      } catch (err) {
+        if (err.response.data === '존재하는 ID입니다.') {
+          alert('존재하는 ID입니다');
+          setId('');
+        } else if (err.response.data === '존재하는 닉네임입니다.') {
+          alert('존재하는 닉네임입니다.');
+          setNickname('');
+        }
       }
-    }
   };
 
   return (
@@ -174,7 +156,13 @@ export default function JoinBox() {
           value={nickname}
           onChange={registerNickname}
         ></Nickname>
-        <Phone placeholder="Phone ex.01012341234" value={phone} onChange={registerPhone} type='number' required></Phone>
+        <Phone
+          placeholder="Phone ex.01012341234"
+          value={phone}
+          onChange={registerPhone}
+          type="number"
+          required
+        ></Phone>
         <br />
         <div>-------side info-------</div>
         <City name="items1" onChange={registerCity} required>

@@ -32,9 +32,6 @@ const ID = styled.input`
   height: 8%;
   padding: 10px;
   border: 1px solid #d8d8d8;
-  ::placeholder {
-    font-size: 3px;
-  }
 `;
 const PW = styled.input`
   width: 70%;
@@ -42,9 +39,6 @@ const PW = styled.input`
   padding: 10px;
   margin: 8px;
   border: 1px solid #d8d8d8;
-  ::placeholder {
-    font-size: 3px;
-  }
 `;
 const ErrorMSG = styled.div`
   width: 62%;
