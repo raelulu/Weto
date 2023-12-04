@@ -5,12 +5,21 @@
 🙌 진행 인원 : 5명 (프론트엔드: 3명, 백엔드: 2명)
 
 
-
-💜 사이트 :  </h3> <a href="http://13.124.235.1:3000"> Weto </a> <br />
+<br />
+💜사이트 :  </h3> <a href="http://13.124.235.1:3000"> Weto </a> <br /><br />
 
 <img src="https://github.com/raelulu/NewKiosk/assets/115077413/dd6f05a5-0d0e-4688-b2d8-06a27ed96488" width="760" height="500"/>
 
 <img src="https://github.com/raelulu/NewKiosk/assets/115077413/413cbc2e-3e96-42d9-940a-521593a60f64" width="760" height="500"/>
+
+
+
+<h3> 🙋‍♂️담당 기능 </h3>
+
+- 채팅방 생성 페이지 구성
+  
+![챗방개설](https://github.com/raelulu/NewKiosk/assets/115077413/d90b53b8-c385-40f8-95ef-5a40381e0a5d)
+
 <h3> 🔨 Stack  </h3>
 <h4>  Front-end  </h4>
 <div>
@@ -30,4 +39,3 @@
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat&logo=Figma&logoColor=white"/>
 
 </div>
-
