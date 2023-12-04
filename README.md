@@ -17,8 +17,9 @@
 <h3> 🙋‍♂️담당 기능 </h3>
 
 - 채팅방 생성 페이지 구성
+
+<img src="https://github.com/raelulu/NewKiosk/assets/115077413/d90b53b8-c385-40f8-95ef-5a40381e0a5d" width="660" height="370"/>
   
-![챗방개설](https://github.com/raelulu/NewKiosk/assets/115077413/d90b53b8-c385-40f8-95ef-5a40381e0a5d)
 
 <h3> 🔨 Stack  </h3>
 <h4>  Front-end  </h4>
